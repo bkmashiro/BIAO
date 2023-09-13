@@ -12,7 +12,7 @@ public class SqlSrvDBConn {
     		Class.forName("com.mysql.jdbc.Driver");
     		/**编写连接字符串，获取创建连接*/
 		conn=DriverManager.getConnection(
-		"jdbc:mysql://localhost:3306/J2EE","root","admin");
+		"jdbc:mysql://localhost:3306/J2EE","root","1234");
     	}catch(Exception e){
     		e.printStackTrace();
     	}
@@ -31,6 +31,22 @@ public class SqlSrvDBConn {
         }
         return rs;					//返回结果集
     }
+
+    public int executeUpdate(String sql)
+    {
+        int result=0;
+        try
+        {
+        	   stmt=conn.createStatement(ResultSet.TYPE_SCROLL_SENSITIVE
+                                            ,ResultSet.CONCUR_UPDATABLE);
+        	   result=stmt.executeUpdate(sql);	//执行更新语句
+        }catch(SQLException e){
+        	   System.err.println("Data.executeUpdate: " + e.getMessage());
+        }
+        return result;					//返回更新的行数
+    }
+
+
     //关闭对象
     public void closeStmt()
     {

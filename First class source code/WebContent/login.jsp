@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="gb2312"%>
 <html>
 <head>
-	<title>简易留言板-early access</title>
+	<title>简易留言板</title>
 </head>
 <body bgcolor="#E3E3E3">
 <form action="validate.jsp" method="post">
@@ -23,6 +23,6 @@
 <input type="submit" value="login"/>
 <input type="reset" value="reset"/>
 </form>
-如果没注册单击<a href="">here</a>register！
+如果没注册单击<a href="http://localhost:8080/Test1_war_exploded/register.jsp">here</a>register！
 </body>
 </html>
