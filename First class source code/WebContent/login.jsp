@@ -1,7 +1,7 @@
 <%@ page language="java" pageEncoding="gb2312"%>
 <html>
 <head>
-	<title>╪РрваТят╟Е</title>
+	<title>╪РрваТят╟Е-early access</title>
 </head>
 <body bgcolor="#E3E3E3">
 <form action="validate.jsp" method="post">

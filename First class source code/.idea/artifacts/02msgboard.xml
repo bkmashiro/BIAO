@@ -1,0 +1,13 @@
+<component name="ArtifactManager">
+  <artifact type="exploded-war" name="02msgboard">
+    <output-path>$PROJECT_DIR$/classes/artifacts/02msgboard</output-path>
+    <root id="root">
+      <element id="directory" name="WEB-INF">
+        <element id="directory" name="classes">
+          <element id="module-output" name="testservlet" />
+        </element>
+      </element>
+      <element id="javaee-facet-resources" facet="testservlet/web/Web" />
+    </root>
+  </artifact>
+</component>
