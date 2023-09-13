@@ -12,7 +12,7 @@ public class SqlSrvDBConn {
     		Class.forName("com.mysql.jdbc.Driver");
     		/**编写连接字符串，获取创建连接*/
 		conn=DriverManager.getConnection(
-		"jdbc:mysql://localhost:3306/j2ee","","");
+		"jdbc:mysql://localhost:3306/j2ee","root","");
     	}catch(Exception e){
     		e.printStackTrace();
     	}
