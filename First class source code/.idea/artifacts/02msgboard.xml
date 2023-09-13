@@ -6,6 +6,10 @@
         <element id="directory" name="classes">
           <element id="module-output" name="testservlet" />
         </element>
+        <element id="directory" name="lib">
+          <element id="file-copy" path="$PROJECT_DIR$/../../../java/apache-tomcat-10.1.13/lib/servlet-api.jar" />
+          <element id="library" level="project" name="Java EE 6-Java EE 6" />
+        </element>
       </element>
       <element id="javaee-facet-resources" facet="testservlet/web/Web" />
     </root>
