@@ -27,25 +27,11 @@ public class getMessages extends HttpServlet {
 
         sqlsrvdb.executeUpdate(insertSql);
 
-        List<message> messages = new ArrayList<>();
-        String sql = "select * from comment";
-        ResultSet rs = sqlsrvdb.executeQuery(sql);
-        try {
-            while (rs.next()) {
-                message msg = new message();
-                msg.setId(rs.getInt(1));
-                msg.setSentBy(rs.getString(2));
-                msg.setContent(rs.getString(3));
-                messages.add(msg);
-            }
-            rs.close();
-        } catch (SQLException e) {
-            e.printStackTrace();
-        }
+
         sqlsrvdb.closeStmt();
         sqlsrvdb.closeConn();
-        HttpSession session = request.getSession();
-        session.setAttribute("messages", messages);
+
+
         response.sendRedirect("success.jsp");
     }
 
